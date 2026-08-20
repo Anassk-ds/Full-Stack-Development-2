@@ -1,1 +1,19 @@
-
+{
+  "name": "02-http-methods",
+  "version": "1.0.0",
+  "description": "Express JS HTTP Methods Experiment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "http",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

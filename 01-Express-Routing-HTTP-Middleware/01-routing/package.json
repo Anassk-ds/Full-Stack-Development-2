@@ -1,1 +1,19 @@
-
+{
+  "name": "01-routing",
+  "version": "1.0.0",
+  "description": "Express JS Routing Experiment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "routing",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

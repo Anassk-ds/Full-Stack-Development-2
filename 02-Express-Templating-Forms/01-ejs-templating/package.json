@@ -1,1 +1,21 @@
-
+{
+  "name": "01-ejs-templating",
+  "version": "1.0.0",
+  "description": "Express JS EJS Templating Experiment",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "ejs",
+    "templating",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

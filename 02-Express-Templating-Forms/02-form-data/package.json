@@ -1,1 +1,20 @@
-
+{
+  "name": "02-form-data",
+  "version": "1.0.0",
+  "description": "Express JS Form Data Experiment",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "forms",
+    "form-data",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}

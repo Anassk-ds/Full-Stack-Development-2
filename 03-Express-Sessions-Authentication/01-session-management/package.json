@@ -1,1 +1,21 @@
-
+{
+  "name": "01-session-management",
+  "version": "1.0.0",
+  "description": "Express JS Session Management",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "session",
+    "cookies",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  }
+}

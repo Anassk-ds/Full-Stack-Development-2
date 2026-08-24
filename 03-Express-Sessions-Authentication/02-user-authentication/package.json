@@ -1,1 +1,23 @@
-
+{
+  "name": "02-user-authentication",
+  "version": "1.0.0",
+  "description": "Express JS User Authentication",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "authentication",
+    "session",
+    "login",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "express-session": "^1.18.2"
+  }
+}

@@ -1,1 +1,23 @@
-
+{
+  "name": "01-mongodb-mongoose-crud",
+  "version": "1.0.0",
+  "description": "Express JS MongoDB Mongoose CRUD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "mongodb",
+    "mongoose",
+    "crud",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.18.0"
+  }
+}

@@ -1,1 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Simple SPA with Express REST API</title>
+
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2rem;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+        }
+
+        button {
+            margin-left: 1rem;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Items</h1>
+
+    <form id="addForm">
+
+        <input
+            type="text"
+            id="itemName"
+            placeholder="New item name"
+            required
+        >
+
+        <button type="submit">
+            Add Item
+        </button>
+
+    </form>
+
+    <ul id="itemsList"></ul>
+
+    <script>
+
+        const itemsList =
+            document.getElementById("itemsList");
+
+        const addForm =
+            document.getElementById("addForm");
+
+        const itemNameInput =
+            document.getElementById("itemName");
+
+
+        // Fetch and display items
+        async function fetchItems() {
+
+            const response =
+                await fetch("/api/items");
+
+            const items =
+                await response.json();
+
+            itemsList.innerHTML = "";
+
+            items.forEach((item) => {
+
+                const li =
+                    document.createElement("li");
+
+                li.textContent = item.name;
+
+                const deleteButton =
+                    document.createElement("button");
+
+                deleteButton.textContent = "Delete";
+
+                deleteButton.onclick = async () => {
+
+                    await fetch(
+                        `/api/items/${item.id}`,
+                        {
+                            method: "DELETE"
+                        }
+                    );
+
+                    fetchItems();
+                };
+
+                li.appendChild(deleteButton);
+
+                itemsList.appendChild(li);
+            });
+        }
+
+
+        // Handle form submission
+        addForm.onsubmit = async (event) => {
+
+            event.preventDefault();
+
+            const name =
+                itemNameInput.value.trim();
+
+            if (!name) {
+                return;
+            }
+
+            await fetch("/api/items", {
+
+                method: "POST",
+
+                headers: {
+                    "Content-Type": "application/json"
+                },
+
+                body: JSON.stringify({
+                    name: name
+                })
+
+            });
+
+            itemNameInput.value = "";
+
+            fetchItems();
+        };
+
+
+        // Initial fetch
+        fetchItems();
+
+    </script>
+
+</body>
+
+</html>

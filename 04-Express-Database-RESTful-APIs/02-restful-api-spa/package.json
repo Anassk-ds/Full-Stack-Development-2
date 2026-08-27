@@ -1,1 +1,20 @@
-
+{
+  "name": "02-restful-api-spa",
+  "version": "1.0.0",
+  "description": "Single Page Application using Express RESTful APIs",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": [
+    "express",
+    "rest-api",
+    "spa",
+    "nodejs"
+  ],
+  "author": "Shaik Anas",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
